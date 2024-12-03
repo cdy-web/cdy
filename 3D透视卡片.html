@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.card{
+				width: 400px;
+				margin: 100px auto;
+				position: relative;
+				transform-style:perserve-3d;/*开启3d*/
+				transition: transform 1s;/*动画时间*/
+			}
+			.banner{
+				width: 100%;
+				height: 400px;
+				background-color: yellow;
+				border-top-left-radius: 20px;/*圆角*/
+				border-top-right-radius: 20px;
+				transition: all 1s;/*动画时间*/
+			}
+			.desc{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;/*行高*/
+				background-color: #f6901a;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;/*加粗*/
+				color: white;
+				transition: all 1s;
+			}
+			.role{
+				position: absolute;
+				left: -130px;
+				transition: all 1s;
+			}
+			
+			.card:hover{
+				transform: perspective(600px) rotateX(20deg);/*透视*/
+			}
+			.card:hover .role{
+				transform:perspective(150px) translate3d(0,-10px,10px);/*3d平移*/
+				filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.5));/*阴影*/
+				
+				
+			}
+			.card:hover .desc{
+				font-size: 30px;
+				transform: perspective(100px);/*透视*/
+				text-shadow:0 5px 5px rgba(0,0,0,0.5);/*文字阴影*/
+			}
+			
+			/*@keyframes play{
+				0%{transform: rotate(0deg);}
+				100%{transform: rotate(360deg);}
+			}*/
+			/* @keyframes play { */
+				/* 0%{transform: translate(0px,0px);} */
+				/* 100%{transform: translate(300px,100px);} */
+			/* } */
+			/* img:hover{ */
+				/* animation: play 4s linear; */
+			/* } */
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			<div  class="role">
+				<img src="img/4E7C79B02D761BCE478CD1A7E09A92E9.png"/>
+			</div>
+			<div class="banner"></div>
+			<div class="desc">派大星</div>
+		</div>
+		
+	</body>
+</html>
